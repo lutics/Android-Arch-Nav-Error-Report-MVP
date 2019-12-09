@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="codes.stable.opensource.android.MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_dialogFragmentOne"
+            app:destination="@id/dialogFragmentOne" />
+        <action
+            android:id="@+id/action_mainFragment_to_dialogFragmentTwo"
+            app:destination="@id/dialogFragmentTwo" />
+        <action
+            android:id="@+id/action_mainFragment_to_otherActivity"
+            app:destination="@id/otherActivity" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogFragmentOne"
+        android:name="codes.stable.opensource.android.DialogFragmentOne"
+        tools:layout="@layout/dialog_fragment_one" />
+    <fragment
+        android:id="@+id/dialogFragmentTwo"
+        android:name="codes.stable.opensource.android.DialogFragmentTwo"
+        tools:layout="@layout/dialog_fragment_two" />
+    <activity
+        android:id="@+id/otherActivity"
+        android:name="codes.stable.opensource.android.OtherActivity"
+        tools:layout="@layout/other_activity" />
+</navigation>
